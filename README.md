@@ -7,3 +7,5 @@ How to run:
 3. Open R script "main.R" in RStudio. This script does all the statistical analyses.
 4. In the R script, set the global variable "root" to the absolute path of the root folder (folder where the R script is located).
 5. Run the R script.
+
+NOTE: The R script should be rerun if the python script was again executed afterward. It should be done even if there were no changes to the python script or ttl files.
