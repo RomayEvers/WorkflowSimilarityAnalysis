@@ -5,12 +5,12 @@ root <- "";
 ####################################################################
 
 
-libraries <- c("stringr", "ggplot2", "reshape2")
+libraries <- c("stringr", "ggplot2", "reshape2", "ngram")
 
 for(mylibrary in libraries){
   ## [SC] installing gplots package
   if (!(mylibrary %in% rownames(installed.packages()))) {
-    install.package(mylibrary)
+    install.packages(mylibrary)
   }
   library(mylibrary, character.only = TRUE)
 }
@@ -233,6 +233,53 @@ extractSentenxeFeatures <- function() {
   
   lmRes <- lm(cycleCount ~ phraseCount, data=qStatsDF)
   print(summary(lmRes))
+  
+  ##############################################################################
+  # [SC] n-gram analysis
+  
+  minLength <- 3
+  allNGramsVC <- character()
+  for(rowIndex in 1:nrow(wfs)){
+    serial <- wfs$serial[rowIndex]
+    serialLength <- nchar(serial)
+
+    if (serialLength < minLength){
+      next
+    }
+    
+    # [SC] adding space between characters, otherwise get.ngrams does not work
+    tempSerial <- substring(serial, 1, 1)
+    for(index in 2:nchar(serial)){
+      tempSerial <- paste(tempSerial, substring(serial, index, index))
+    }
+    
+    # [SC] detect all ngrams and store in a vector
+    for(index in minLength:serialLength){
+      ng <- ngram(tempSerial, n=index, sep=" ")
+      allNGramsVC <- c(allNGramsVC, get.ngrams(ng))
+    }
+  }
+  
+  # [SC] convert ngram vector to data.frame and calculate frequency
+  ngramDF <- data.frame(ngram=allNGramsVC, freq=1, stringsAsFactors=FALSE)
+  ngramDF <- aggregate(freq ~ ngram, data=ngramDF, sum)
+  ngramDF <- subset(ngramDF, ngramDF$freq > 2)
+  rowsToRemove <- numeric()
+  for(rowIndex in 1:nrow(ngramDF)){
+    mygram <- ngramDF$ngram[rowIndex]
+    
+    # [SC] remove unnecessary ngrams
+    if (substring(mygram, 1, 1) == "|"){
+      rowsToRemove <- c(rowsToRemove, rowIndex)
+    }
+    else if (substring(mygram, nchar(mygram), nchar(mygram)) != "|") {
+      rowsToRemove <- c(rowsToRemove, rowIndex)
+    }
+  }
+  ngramDF <- ngramDF[-rowsToRemove,]
+  ngramDF <- ngramDF[order(ngramDF$freq, decreasing=TRUE),]
+  print(ngramDF)
+  
 }
 
 measureInterWfSimilarity()
