@@ -1,0 +1,41 @@
+intent;adjective;distance;qid
+year;average construction ;0;WF-1
+year;average;2;WF-1
+year;construction;1;WF-1
+distance;average ;0;WF-2
+distance;average;1;WF-2
+label;average energy ;0;WF-4
+label;average;2;WF-4
+label;energy;1;WF-4
+density;average green roof ;0;WF-5
+density;average;3;WF-5
+density;green;2;WF-5
+density;roof;1;WF-5
+income;average ;0;WF-6
+income;average;1;WF-6
+percentage;average ;0;WF-7
+percentage;average;1;WF-7
+distance;average ;0;WF-8
+distance;average;1;WF-8
+distance;average ;0;WF-9
+distance;average;1;WF-9
+Index;Safety ;0;WF-10
+Index;Safety;1;WF-10
+distance;mean ;0;WF-13
+distance;mean;1;WF-13
+distance;mean ;0;WF-14
+distance;mean;1;WF-14
+density;average tree ;0;WF-15
+density;average;2;WF-15
+density;tree;1;WF-15
+effect;average urban heat island ;0;WF-16
+effect;average;4;WF-16
+effect;urban;3;WF-16
+effect;heat;2;WF-16
+effect;island;1;WF-16
+density;average wall plant ;0;WF-17
+density;average;3;WF-17
+density;wall;2;WF-17
+density;plant;1;WF-17
+percentage;average ;0;WF-18
+percentage;average;1;WF-18

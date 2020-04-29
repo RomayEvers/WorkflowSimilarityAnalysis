@@ -1,0 +1,60 @@
+intent;relation;object;distance;qid
+year;per;PC4 area;0;WF-1
+year;per;area;1;WF-1
+year;per;PC4;2;WF-1
+distance;to;hospitals;0;WF-2
+distance;to;hospitals;1;WF-2
+number;of;elderly people;0;WF-3
+number;of;people;1;WF-3
+number;of;elderly;2;WF-3
+label;per;PC4 area;0;WF-4
+label;per;area;1;WF-4
+label;per;PC4;2;WF-4
+density;per;PC4 area;0;WF-5
+density;per;area;1;WF-5
+density;per;PC4;2;WF-5
+income;per;PC4 area;0;WF-6
+income;per;area;1;WF-6
+income;per;PC4;2;WF-6
+percentage;of;people experiencing severe loneliness;0;WF-7
+percentage;of;loneliness;1;WF-7
+percentage;of;severe;2;WF-7
+percentage;of;experiencing;3;WF-7
+percentage;of;people;4;WF-7
+distance;to;parks and green;0;WF-8
+distance;to;green;1;WF-8
+distance;to;parks;3;WF-8
+distance;to;residential care complexes;0;WF-9
+distance;to;complexes;1;WF-9
+distance;to;care;2;WF-9
+distance;to;residential;3;WF-9
+Index;per;district;0;WF-10
+Index;per;district;1;WF-10
+number;of;sport facilities;0;WF-11
+number;of;facilities;1;WF-11
+number;of;sport;2;WF-11
+variety;of;sport facilities;0;WF-12
+variety;of;facilities;1;WF-12
+variety;of;sport;2;WF-12
+distance;to;a subway station;0;WF-13
+distance;to;station;1;WF-13
+distance;to;subway;2;WF-13
+distance;to;a tram station;0;WF-14
+distance;to;station;1;WF-14
+distance;to;tram;2;WF-14
+density;per;PC4 area;0;WF-15
+density;per;area;1;WF-15
+density;per;PC4;2;WF-15
+effect;per;PC4 area;0;WF-16
+effect;per;area;1;WF-16
+effect;per;PC4;2;WF-16
+density;per;PC4 area;0;WF-17
+density;per;area;1;WF-17
+density;per;PC4;2;WF-17
+percentage;of;water area;0;WF-18
+percentage;of;area;1;WF-18
+percentage;of;water;2;WF-18
+distribution;of;the WOZ-waarde;0;WF-19
+distribution;of;WOZ-waarde;1;WF-19
+percentage;of;population;0;WF-20
+percentage;of;population;1;WF-20
