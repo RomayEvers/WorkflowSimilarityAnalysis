@@ -19,9 +19,6 @@
 # [TODO] changed comments: BAGPC4
 
 
-
-# [TODO] ngram analysis on serialization
-
 import re
 import csv
 
@@ -58,13 +55,7 @@ def parseWhatQuestions():
 
     simpleObjExp = (
             "(?P<relation>(across|along|among|around|at|based on|based upon|between|by|for|from|given|in|inside|of|on|over|per|since|that|to|with|within) )"
-            + "("
-            + "(?P<object>(.*?))"  # lazy matching any zero or more chars
-            + "("
-            + "(?= (across|along|among|around|at|between|by|for|from|given|if|in|inside|like|of|on|over|per|such|that|to|when|where|which|with|within) )"  # positive lookahead
-            + "|$"
-            + ")"
-            + ")?"  # the entire pattern should occur 0 or 1 time
+            + "(?P<object>.*)"  # lazy matching any zero or more chars
     )
     simpleObjMatcher = re.compile(simpleObjExp, re.IGNORECASE)
 
@@ -146,6 +137,12 @@ def parseWhatQuestions():
                                         if extentResult.group('objectphrase'):
                                             simpleObjResult = simpleObjMatcher.search(extentResult.group('objectphrase'))
 
+                                            print(q)
+                                            print(extentResult.group('objectphrase'))
+                                            print(simpleObjResult.group('relation'))
+                                            print(simpleObjResult.group('object'))
+                                            print("")
+
                                             # [SC] write to file the entire object phrase at first
                                             objwriter.writerow({
                                                 'intent': intentResult.group('intent')
@@ -171,13 +168,13 @@ def parseWhatQuestions():
 def extractUniqueTools():
     asciiChars = list(range(48, 58))
     asciiChars.extend(range(65, 91))
-    asciiChars.extend(range(97, 122))
+    asciiChars.extend(range(97, 123))
 
     toolCount = 0
 
     toolDict.clear()
 
-    # [SC] writes detected intent to this file as table with intent and question id
+    # [SC] this file stores tool annotation with letters
     with open(f"{dataOutputDir}\\tools.csv", 'w', newline='') as toolcsvfile:
         toolwriter = csv.DictWriter(toolcsvfile, delimiter=';', fieldnames=['toolUri', 'letter'])
         toolwriter.writeheader()
@@ -273,10 +270,12 @@ def serializeWorkflow():
                 print(wfSerialization)
 
 
+# [SC] this function is for testing purpose only
 def testSerializeWorkflow():
     g = Graph()
     g.parse(f"{workflowDataDir}\\WallplantsPC4 kopie.ttl", format="turtle")
 
+    # [SC] for testing purpose only
     # for subj, pred, obj in g:
     #     print(subj)
     #     print(pred)
@@ -375,29 +374,3 @@ if __name__ == '__main__':
 
     # [SC] serialize workflows
     serializeWorkflow()
-
-    # g = Graph()
-    # g.parse(f"{workflowDataDir}\\BAGPC4 kopie.ttl", format="turtle")
-    #
-    # for s, p, o in g.triples((None, RDF.type, wfType)):
-    #     for ss, sp, so in g.triples((s, RDFS.comment, None)):
-    #         print("{} is a workflow for {}".format(ss, so))
-
-    # for s, p, o in g.triples((None, RDF.type, None)):
-    #     print(s)
-    #     print(p)
-    #     print(o)
-    #     print("")
-
-    # loop through each triple in the graph (subj, pred, obj)
-    # for subj, pred, obj in g:
-    #     print(subj)
-    #     print(pred)
-    #     print(obj)
-    #     print("")
-    #     # check if there is at least one triple in the Graph
-    #     if (subj, pred, obj) not in g:
-    #         raise Exception("It better be!")
-
-    # for stmt in g:
-    #     pprint.pprint(stmt)
