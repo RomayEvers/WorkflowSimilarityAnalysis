@@ -1,101 +1,101 @@
-intent;relation;object;distance;qid
-year;per;PC4 area;0;WF-1
-year;per;area;1;WF-1
-year;per;PC4;2;WF-1
-distance;to;hospitals per PC4 area;0;WF-2
-distance;to;area;1;WF-2
-distance;to;PC4;2;WF-2
-distance;to;per;3;WF-2
-distance;to;hospitals;4;WF-2
-number;of;elderly people for each neighborhood;0;WF-3
-number;of;neighborhood;1;WF-3
-number;of;each;2;WF-3
-number;of;for;3;WF-3
-number;of;people;4;WF-3
-number;of;elderly;5;WF-3
-label;per;PC4 area;0;WF-4
-label;per;area;1;WF-4
-label;per;PC4;2;WF-4
-density;per;PC4 area;0;WF-5
-density;per;area;1;WF-5
-density;per;PC4;2;WF-5
-income;per;PC4 area;0;WF-6
-income;per;area;1;WF-6
-income;per;PC4;2;WF-6
-percentage;of;people experiencing severe loneliness in the PC4 areas;0;WF-7
-percentage;of;areas;1;WF-7
-percentage;of;PC4;2;WF-7
-percentage;of;in;4;WF-7
-percentage;of;loneliness;5;WF-7
-percentage;of;severe;6;WF-7
-percentage;of;experiencing;7;WF-7
-percentage;of;people;8;WF-7
-distance;to;parks and green per PC4 area;0;WF-8
-distance;to;area;1;WF-8
-distance;to;PC4;2;WF-8
-distance;to;per;3;WF-8
-distance;to;green;4;WF-8
-distance;to;parks;6;WF-8
-distance;to;residential care complexes per PC4 area;0;WF-9
-distance;to;area;1;WF-9
-distance;to;PC4;2;WF-9
-distance;to;per;3;WF-9
-distance;to;complexes;4;WF-9
-distance;to;care;5;WF-9
-distance;to;residential;6;WF-9
-Index;per;district;0;WF-10
-Index;per;district;1;WF-10
-number;of;sport facilities in a one kilometer radius per neighborhood;0;WF-11
-number;of;neighborhood;1;WF-11
-number;of;per;2;WF-11
-number;of;radius;3;WF-11
-number;of;kilometer;4;WF-11
-number;of;one;5;WF-11
-number;of;in;7;WF-11
-number;of;facilities;8;WF-11
-number;of;sport;9;WF-11
-variety;of;sport facilities per neighborhood;0;WF-12
-variety;of;neighborhood;1;WF-12
-variety;of;per;2;WF-12
-variety;of;facilities;3;WF-12
-variety;of;sport;4;WF-12
-distance;to;a subway station per neighborhood;0;WF-13
-distance;to;neighborhood;1;WF-13
-distance;to;per;2;WF-13
-distance;to;station;3;WF-13
-distance;to;subway;4;WF-13
-distance;to;a tram station per neighborhood;0;WF-14
-distance;to;neighborhood;1;WF-14
-distance;to;per;2;WF-14
-distance;to;station;3;WF-14
-distance;to;tram;4;WF-14
-density;per;PC4 area;0;WF-15
-density;per;area;1;WF-15
-density;per;PC4;2;WF-15
-effect;per;PC4 area;0;WF-16
-effect;per;area;1;WF-16
-effect;per;PC4;2;WF-16
-density;per;PC4 area;0;WF-17
-density;per;area;1;WF-17
-density;per;PC4;2;WF-17
-percentage;of;water area in the PC4 areas;0;WF-18
-percentage;of;areas;1;WF-18
-percentage;of;PC4;2;WF-18
-percentage;of;in;4;WF-18
-percentage;of;area;5;WF-18
-percentage;of;water;6;WF-18
-distribution;of;the WOZ-waarde per square meter per neighborhood;0;WF-19
-distribution;of;neighborhood;1;WF-19
-distribution;of;per;2;WF-19
-distribution;of;meter;3;WF-19
-distribution;of;square;4;WF-19
-distribution;of;per;5;WF-19
-distribution;of;WOZ-waarde;6;WF-19
-percentage;of;population between 16 and 24 years per neighborhood;0;WF-20
-percentage;of;neighborhood;1;WF-20
-percentage;of;per;2;WF-20
-percentage;of;years;3;WF-20
-percentage;of;24;4;WF-20
-percentage;of;16;6;WF-20
-percentage;of;between;7;WF-20
-percentage;of;population;8;WF-20
+intent;relation;object;distance;qid
+income;per;PC4 area;0;WF-1
+income;per;area;1;WF-1
+income;per;PC4;2;WF-1
+density;per;PC4 area;0;WF-2
+density;per;area;1;WF-2
+density;per;PC4;2;WF-2
+density;per;PC4 area;0;WF-3
+density;per;area;1;WF-3
+density;per;PC4;2;WF-3
+distance;to;a tram station per neighborhood;0;WF-4
+distance;to;neighborhood;1;WF-4
+distance;to;per;2;WF-4
+distance;to;station;3;WF-4
+distance;to;tram;4;WF-4
+distance;to;hospitals per PC4 area;0;WF-5
+distance;to;area;1;WF-5
+distance;to;PC4;2;WF-5
+distance;to;per;3;WF-5
+distance;to;hospitals;4;WF-5
+percentage;of;people experiencing severe loneliness in the PC4 areas;0;WF-6
+percentage;of;areas;1;WF-6
+percentage;of;PC4;2;WF-6
+percentage;of;in;4;WF-6
+percentage;of;loneliness;5;WF-6
+percentage;of;severe;6;WF-6
+percentage;of;experiencing;7;WF-6
+percentage;of;people;8;WF-6
+year;per;PC4 area;0;WF-7
+year;per;area;1;WF-7
+year;per;PC4;2;WF-7
+percentage;of;population between 16 and 24 years per neighborhood;0;WF-8
+percentage;of;neighborhood;1;WF-8
+percentage;of;per;2;WF-8
+percentage;of;years;3;WF-8
+percentage;of;24;4;WF-8
+percentage;of;16;6;WF-8
+percentage;of;between;7;WF-8
+percentage;of;population;8;WF-8
+number;of;sport facilities in a one kilometer radius per neighborhood;0;WF-9
+number;of;neighborhood;1;WF-9
+number;of;per;2;WF-9
+number;of;radius;3;WF-9
+number;of;kilometer;4;WF-9
+number;of;one;5;WF-9
+number;of;in;7;WF-9
+number;of;facilities;8;WF-9
+number;of;sport;9;WF-9
+percentage;of;water area in the PC4 areas;0;WF-10
+percentage;of;areas;1;WF-10
+percentage;of;PC4;2;WF-10
+percentage;of;in;4;WF-10
+percentage;of;area;5;WF-10
+percentage;of;water;6;WF-10
+distance;to;residential care complexes per PC4 area;0;WF-11
+distance;to;area;1;WF-11
+distance;to;PC4;2;WF-11
+distance;to;per;3;WF-11
+distance;to;complexes;4;WF-11
+distance;to;care;5;WF-11
+distance;to;residential;6;WF-11
+distance;to;a subway station per neighborhood;0;WF-12
+distance;to;neighborhood;1;WF-12
+distance;to;per;2;WF-12
+distance;to;station;3;WF-12
+distance;to;subway;4;WF-12
+number;of;elderly people for each neighborhood;0;WF-13
+number;of;neighborhood;1;WF-13
+number;of;each;2;WF-13
+number;of;for;3;WF-13
+number;of;people;4;WF-13
+number;of;elderly;5;WF-13
+density;per;PC4 area;0;WF-14
+density;per;area;1;WF-14
+density;per;PC4;2;WF-14
+variety;of;sport facilities per neighborhood;0;WF-15
+variety;of;neighborhood;1;WF-15
+variety;of;per;2;WF-15
+variety;of;facilities;3;WF-15
+variety;of;sport;4;WF-15
+distribution;of;the WOZ-waarde per square meter per neighborhood;0;WF-16
+distribution;of;neighborhood;1;WF-16
+distribution;of;per;2;WF-16
+distribution;of;meter;3;WF-16
+distribution;of;square;4;WF-16
+distribution;of;per;5;WF-16
+distribution;of;WOZ-waarde;6;WF-16
+Index;per;district;0;WF-17
+Index;per;district;1;WF-17
+effect;per;PC4 area;0;WF-18
+effect;per;area;1;WF-18
+effect;per;PC4;2;WF-18
+label;per;PC4 area;0;WF-19
+label;per;area;1;WF-19
+label;per;PC4;2;WF-19
+distance;to;parks and green per PC4 area;0;WF-20
+distance;to;area;1;WF-20
+distance;to;PC4;2;WF-20
+distance;to;per;3;WF-20
+distance;to;green;4;WF-20
+distance;to;parks;6;WF-20

@@ -1,21 +1,21 @@
-question;qid
-What is the average construction year per PC4 area in Amsterdam?;WF-1
-What is the average distance to hospitals per PC4 area in Amsterdam?;WF-2
-What is the number of elderly people for each neighborhood in Amsterdam?;WF-3
-What is the average energy label per PC4 area in Amsterdam?;WF-4
-What is the average green roof density per PC4 area in Amsterdam?;WF-5
-What is the average income per PC4 area in Amsterdam?;WF-6
-What is the average percentage of people experiencing severe loneliness in the PC4 areas in Amsterdam?;WF-7
-What is the average distance to parks and green per PC4 area in Amsterdam?;WF-8
-What is the average distance to residential care complexes per PC4 area in Amsterdam?;WF-9
-What is the Safety Index per district in Amsterdam?;WF-10
-What is the number of sport facilities in a one kilometer radius per neighborhood in Amsterdam?;WF-11
-What is the variety of sport facilities per neighborhood in Amsterdam?;WF-12
-What is the mean distance to a subway station per neighborhood in Amsterdam?;WF-13
-What is the mean distance to a tram station per neighborhood in Amsterdam?;WF-14
-What is the average tree density per PC4 area in Amsterdam?;WF-15
-What is the average urban heat island effect per PC4 area in Amsterdam?;WF-16
-What is the average wall plant density per PC4 area in Amsterdam?;WF-17
-What is the average percentage of water area in the PC4 areas in Amsterdam?;WF-18
-What is the distribution of the WOZ-waarde per square meter per neighborhood in Amsterdam?;WF-19
-What is the percentage of population between 16 and 24 years per neighborhood in Amsterdam?;WF-20
+question;qid
+What is the average income per PC4 area in Amsterdam?;WF-1
+What is the average tree density per PC4 area in Amsterdam?;WF-2
+What is the average green roof density per PC4 area in Amsterdam?;WF-3
+What is the mean distance to a tram station per neighborhood in Amsterdam?;WF-4
+What is the average distance to hospitals per PC4 area in Amsterdam?;WF-5
+What is the average percentage of people experiencing severe loneliness in the PC4 areas in Amsterdam?;WF-6
+What is the average construction year per PC4 area in Amsterdam?;WF-7
+What is the percentage of population between 16 and 24 years per neighborhood in Amsterdam?;WF-8
+What is the number of sport facilities in a one kilometer radius per neighborhood in Amsterdam?;WF-9
+What is the average percentage of water area in the PC4 areas in Amsterdam?;WF-10
+What is the average distance to residential care complexes per PC4 area in Amsterdam?;WF-11
+What is the mean distance to a subway station per neighborhood in Amsterdam?;WF-12
+What is the number of elderly people for each neighborhood in Amsterdam?;WF-13
+What is the average wall plant density per PC4 area in Amsterdam?;WF-14
+What is the variety of sport facilities per neighborhood in Amsterdam?;WF-15
+What is the distribution of the WOZ-waarde per square meter per neighborhood in Amsterdam?;WF-16
+What is the Safety Index per district in Amsterdam?;WF-17
+What is the average urban heat island effect per PC4 area in Amsterdam?;WF-18
+What is the average energy label per PC4 area in Amsterdam?;WF-19
+What is the average distance to parks and green per PC4 area in Amsterdam?;WF-20

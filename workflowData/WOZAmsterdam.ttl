@@ -1,3 +1,6 @@
+
+
+
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
@@ -6,23 +9,20 @@
 @prefix tools: <http://geographicknowledge.de/vocab/GISTools.rdf#>.
 @prefix arcpro: <https://pro.arcgis.com/en/pro-app/tool-reference/>.
 @prefix pdok: <https://www.pdok.nl/introductie/-/article/>.
-
+@prefix ois: <https://data.amsterdam.nl/datasets/>.
 
 # @author: Romay Evers
 
-
-# Workflow amounts of elderly people in Amsterdam (age of 65 or older)
+# Workflow WOZ-waarde per square meter per neighborhood in Amsterdam
 # Workflow metadata (result and data sources)
 
-
-_:wf1 a wf:Workflow;
-	rdfs:comment "What is the number of elderly people for each neighborhood in Amsterdam?"@en;
-	# rdfs:comment second question "What is the distribution of elderly people across neighborhoods in Amsterdam?"@en;
+_:wf1 a wf:Workflow ;
+	rdfs:comment "What is the WOZ-waarde per square meter per neighborhood in Amsterdam?"@en;
+	# rdfs:comment second question "What is the distribution of the WOZ-waarde per square meter per neighborhood in Amsterdam?"@en;
 	wf:source pdok:cbs-gebiedsindelingen; #municipalities
 	wf:source pdok:cbs-wijken-en-buurten; #neighborhoodregions
-	wf:source pdok:cbs-vierkantstatistieken; #elderlypeoplecounts
+	wf:source ois:9iEZnQgH7kAzRA%2Fstedelijke-ontwikkeling-buurten%2F; #WOZ-waarde
 	wf:edge _:wf1_1, _:wf1_2, _:wf1_3, _:wf1_4, _:wf1_5.
-
 
 _:wf1_1 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/data-management/select-layer-by-attribute.htm> ;
 	wf:input pdok:cbs-gebiedsindelingen ;
@@ -41,7 +41,7 @@ _:wf1_4 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/data-
 	wf:input _:neighborhoodsamsterdam0 ;
 	wf:output _:neighborhoodsamsterdam.
 
-_:wf1_5 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/analysis/spatial-join.htm> ;
+_:wf1_5 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/geoanalytics-desktop/join-features.htm> ;
 	wf:input _:neighborhoodsamsterdam ;
-	wf:input pdok:cbs-vierkantstatistieken ;
-	wf:output _:countelderlyneighborhoodsamsterdam. 
+	wf:input ois:9iEZnQgH7kAzRA%2Fstedelijke-ontwikkeling-buurten%2F ;
+	wf:output _:wozneighborhoodsamsterdam.

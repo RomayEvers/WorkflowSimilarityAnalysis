@@ -1,3 +1,6 @@
+
+
+
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
@@ -17,7 +20,7 @@ _:wf1 a wf:Workflow;
 	rdfs:comment "What is the average distance to residential care complexes per PC4 area in Amsterdam?"@en;
 	wf:source maps:open_geodata%2F%3Fk%3D192%2F;	#PC4 areas
 	wf:source maps:functiekaart; #residential care complexes
-	wf:edge _:wf1_1, _:wf1_2, _:wf1_3, _:wf1_4, _:wf1_5, _:wf1_6.
+	wf:edge _:wf1_1, _:wf1_2, _:wf1_3, _:wf1_4, _:wf1_4, _:wf1_5, _:wf1_6.
 
 _:wf1_1 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/analysis/select.htm> ;
 	wf:input maps:functiekaart	;

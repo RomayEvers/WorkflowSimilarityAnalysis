@@ -1,5 +1,4 @@
 
-
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
@@ -8,18 +7,19 @@
 @prefix tools: <http://geographicknowledge.de/vocab/GISTools.rdf#>.
 @prefix arcpro: <https://pro.arcgis.com/en/pro-app/tool-reference/>.
 @prefix pdok: <https://www.pdok.nl/introductie/-/article/>.
+@prefix maps: <https://maps.amsterdam.nl/>.
 
-# @author Romay Evers
+# @author: Romay Evers
 
-#Workflow the percentage of population between 16 and 24 years old per neighborhood in Amsterdam
+# Workflow Mean distance to subway station per neighborhood in Amsterdam
 # Workflow metadata (result and data sources)
 
 _:wf1 a wf:Workflow ;
-	rdfs:comment "What is the percentage of population between 16 and 24 years per neighborhood in Amsterdam?"@en;
+	rdfs:comment "What is the mean distance to a subway station per neighborhood in Amsterdam?"@en;
 	wf:source pdok:cbs-gebiedsindelingen; #municipalities
 	wf:source pdok:cbs-wijken-en-buurten; #neighborhoodregions
-	wf:source pdok:cbs-vierkantstatistieken; #youngpeoplecounts
-	wf:edge _:wf1_1, _:wf1_2, _:wf1_3, _:wf1_4, _:wf1_5. 
+	wf:source maps:trammetro; #subwaystations
+	wf:edge _:wf1_1, _:wf1_2, _:wf1_3, _:wf1_4, _:wf1_5, _:wf1_6. 
 
 
 _:wf1_1 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/data-management/select-layer-by-attribute.htm> ;
@@ -39,7 +39,13 @@ _:wf1_4 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/data-
 	wf:input _:neighborhoodsamsterdam0 ;
 	wf:output _:neighborhoodsamsterdam.
 
-_:wf1_5 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/analysis/spatial-join.htm> ;
+_:wf1_5 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/euclidean-distance.htm> ;
+	wf:input maps:trammetro ;
+	wf:output _:outputbackdirectionraster ;
+	wf:output _:outputdirectionraster ;
+	wf:output _:euclideandistancesubwaystation.
+
+_:wf1_6 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/zonal-statistics-as-table.htm> ;
+	wf:input _:euclideandistancesubwaystation ;
 	wf:input _:neighborhoodsamsterdam ;
-	wf:input pdok:cbs-vierkantstatistieken ;
-	wf:output _:countyoungneighborhoodsamsterdam. 
+	wf:output _:meandistancesubwaystation. 

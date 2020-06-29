@@ -1,9 +1,7 @@
 ## [SC] BEFORE RUNNING THE SCRIPT, SET THE PATH TO DIRECTORY WHERE THE R SCRIPT IS!!!!
 
-root <- "";
-
+root <- "~/Desktop/WorkflowSimilarityAnalysis/";
 ####################################################################
-
 
 libraries <- c("stringr", "ggplot2", "reshape2", "ngram")
 
@@ -284,3 +282,5 @@ extractSentenxeFeatures <- function() {
 
 measureInterWfSimilarity()
 extractSentenxeFeatures()
+
+

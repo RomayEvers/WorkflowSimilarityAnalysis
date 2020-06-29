@@ -1,3 +1,5 @@
+
+
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
@@ -31,10 +33,10 @@ _:wf1_2 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/spati
 _:wf1_3 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/spatial-analyst/zonal-statistics-as-table.htm> ;
 	wf:input _:reclass_water ;	#ccd:join-fieldraster
 	wf:input maps:%3Fk%3D192%2F ;	#ccd:coverage
-	wf:output _:water_area.	#ccd:lattice/table
+	wf:output _:water-area.	#ccd:lattice/table
 
 _:wf1_4 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/data-management/join-field.htm> ;
-	wf:input _:water_area ;	#ccd:lattice/table
+	wf:input _:water-area ;	#ccd:lattice/table
 	wf:input maps:%3Fk%3D192%2F ; #ccd:coverage/table
 	wf:output _:waterPC4.	#table
 
