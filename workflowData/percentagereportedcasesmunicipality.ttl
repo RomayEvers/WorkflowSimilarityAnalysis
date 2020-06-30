@@ -19,10 +19,10 @@ _:wf1 a wf:Workflow;
 	rdfs:comment "What is the percentage of reported cases of covid-19, relative to amount of residents in the municipality, per municipality in the Netherlands?"@en;
 	wf:source cbs:wijk-en-buurtkaart-2019; #municipality
 	wf:source RIVM:covid-19%2F; #reportedcasesofcovid19
-	wf:edge _:wf1_1, _:wf1_2. _:wf1_3.
+	wf:edge _:wf1_1, _:wf1_2, _:wf1_3.
 
 _:wf1_1 tools:implements <https://pro.arcgis.com/en/pro-app/tool-reference/data-management/add-join.htm> ;
-	wf:input _:wijk-en-buurtkaart-2019 ; #gemeente_2019_v1.shp
+	wf:input cbs:wijk-en-buurtkaart-2019 ; #gemeente_2019_v1.shp
 	wf:input RIVM:covid-19%2F ; 
 	wf:output _:amountreportedcasespermunicipality0.
 
